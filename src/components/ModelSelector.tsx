@@ -16,29 +16,30 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({ selectedModel, onChange }
     icon: React.ReactNode;
   }> = [
     {
-      id: 'gpt-4o',
-      name: 'GPT-4o',
-      description: 'Haute qualité, détaillé',
-      icon: <BrainCircuit className="w-4 h-4" />
-    },
-    {
-      id: 'gpt-4o-mini',
-      name: 'GPT-4o Mini',
-      description: 'Rapide et efficace',
-      icon: <Zap className="w-4 h-4" />
-    },
-    {
       id: 'pegasus',
       name: 'Pegasus',
-      description: 'Spécialisé en actualités',
+      description: 'Spécialisé pour les articles de presse',
       icon: <Sparkles className="w-4 h-4" />
-    },
-    {
+  },
+  {
       id: 'bart',
       name: 'BART',
-      description: 'Concis et précis',
+      description: 'Concis et polyvalent',
       icon: <BookOpen className="w-4 h-4" />
-    }
+  },
+  {
+      id: 'mistral',
+      name: 'Mistral',
+      description: 'Ultra rapide via Groq',
+      icon: <Wind className="w-4 h-4" />
+  },
+  {
+      id: 'llama',
+      name: 'LLaMA',
+      description: 'Puissant pour les textes complexes',
+      icon: <Mountain className="w-4 h-4" />
+  }
+  
   ];
 
   return (
