@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import SummaryForm from '@/components/SummaryForm';
 import SummaryResult from '@/components/SummaryResult';
 import { SummaryResult as SummaryResultType } from '@/lib/types';
@@ -105,8 +104,6 @@ const Index = () => {
           </div>
         </section>
       </main>
-      
-      <Footer />
     </div>
   );
 };

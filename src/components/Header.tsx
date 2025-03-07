@@ -16,12 +16,6 @@ const Header: React.FC = () => {
               <p className="text-xs text-muted-foreground">Résumé intelligent d'articles</p>
             </div>
           </a>
-          
-          <nav className="hidden md:flex items-center gap-6">
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Comment ça marche</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Guide d'utilisation</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">À propos</a>
-          </nav>
         </div>
       </div>
     </header>
