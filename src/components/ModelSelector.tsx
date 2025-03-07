@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { SummaryModel } from '@/lib/types';
-import { BrainCircuit, ZapFast, BookOpen, Sparkles } from 'lucide-react';
+import { BrainCircuit, Zap, BookOpen, Sparkles } from 'lucide-react';
 
 interface ModelSelectorProps {
   selectedModel: SummaryModel;
@@ -25,7 +25,7 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({ selectedModel, onChange }
       id: 'gpt-4o-mini',
       name: 'GPT-4o Mini',
       description: 'Rapide et efficace',
-      icon: <ZapFast className="w-4 h-4" />
+      icon: <Zap className="w-4 h-4" />
     },
     {
       id: 'pegasus',
