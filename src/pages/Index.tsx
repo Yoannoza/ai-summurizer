@@ -1,7 +1,10 @@
+
 import React, { useState } from 'react';
+import Header from '@/components/Header';
 import SummaryForm from '@/components/SummaryForm';
 import SummaryResult from '@/components/SummaryResult';
 import { SummaryResult as SummaryResultType } from '@/lib/types';
+import { ChevronDown } from 'lucide-react';
 
 const Index = () => {
   const [result, setResult] = useState<SummaryResultType | null>(null);
@@ -9,6 +12,7 @@ const Index = () => {
   const handleResultGenerated = (newResult: SummaryResultType) => {
     setResult(newResult);
     
+    // Scroll to result after a short delay
     setTimeout(() => {
       const resultElement = document.getElementById('result-section');
       if (resultElement) {
@@ -19,6 +23,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col">
       <main className="flex-1">
         <section className="py-16 px-4 text-center relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none">
