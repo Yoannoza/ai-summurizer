@@ -48,16 +48,6 @@ const Index = () => {
             <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <SummaryForm onResultGenerated={handleResultGenerated} />
             </div>
-            
-            <div className="mt-16 flex justify-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              <a 
-                href="#how-it-works" 
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Découvrir comment ça marche
-                <ChevronDown className="w-4 h-4" />
-              </a>
-            </div>
           </div>
         </section>
         
@@ -69,40 +59,6 @@ const Index = () => {
             </div>
           </section>
         )}
-        
-        <section id="how-it-works" className="py-20 px-4 bg-muted/30">
-          <div className="container max-w-4xl text-center">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-12">Comment ça marche</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  step: "1",
-                  title: "Choisissez votre source",
-                  description: "Collez l'URL de l'article ou le texte complet à résumer."
-                },
-                {
-                  step: "2",
-                  title: "Sélectionnez le modèle",
-                  description: "Choisissez un modèle d'IA adapté à vos besoins de synthèse."
-                },
-                {
-                  step: "3",
-                  title: "Obtenez votre résumé",
-                  description: "En quelques secondes, recevez une synthèse claire et concise."
-                }
-              ].map((item) => (
-                <div key={item.step} className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center mb-4 border border-border">
-                    <span className="text-lg font-medium">{item.step}</span>
-                  </div>
-                  <h3 className="text-lg font-medium mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
       </main>
     </div>
   );
