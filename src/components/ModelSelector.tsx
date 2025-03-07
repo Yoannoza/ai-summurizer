@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { SummaryModel } from '@/lib/types';
-import { BrainCircuit, Zap, BookOpen, Sparkles } from 'lucide-react';
+import { Wind, Mountain, BookOpen, Sparkles } from 'lucide-react';
 
 interface ModelSelectorProps {
   selectedModel: SummaryModel;
@@ -16,29 +16,29 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({ selectedModel, onChange }
     icon: React.ReactNode;
   }> = [
     {
-      id: 'pegasus',
-      name: 'Pegasus',
-      description: 'Spécialisé pour les articles de presse',
-      icon: <Sparkles className="w-4 h-4" />
-  },
-  {
-      id: 'bart',
-      name: 'BART',
-      description: 'Concis et polyvalent',
-      icon: <BookOpen className="w-4 h-4" />
-  },
-  {
-      id: 'mistral',
-      name: 'Mistral',
-      description: 'Ultra rapide via Groq',
-      icon: <Wind className="w-4 h-4" />
-  },
-  {
-      id: 'llama',
-      name: 'LLaMA',
-      description: 'Puissant pour les textes complexes',
-      icon: <Mountain className="w-4 h-4" />
-  }
+        id: 'pegasus',
+        name: 'Pegasus',
+        description: 'Spécialisé pour les articles de presse',
+        icon: <Sparkles className="w-4 h-4" />
+    },
+    {
+        id: 'bart',
+        name: 'BART',
+        description: 'Concis et polyvalent',
+        icon: <BookOpen className="w-4 h-4" />
+    },
+    {
+        id: 'mistral',
+        name: 'Mistral',
+        description: 'Ultra rapide via Groq',
+        icon: <Wind className="w-4 h-4" />
+    },
+    {
+        id: 'llama',
+        name: 'LLaMA',
+        description: 'Puissant pour les textes complexes',
+        icon: <Mountain className="w-4 h-4" />
+    }
   
   ];
 

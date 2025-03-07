@@ -58,7 +58,6 @@ const Index = () => {
           </section>
         )}
       </main>
-
     </div>
   );
 };
