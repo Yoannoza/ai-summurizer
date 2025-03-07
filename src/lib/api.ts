@@ -1,7 +1,7 @@
-
 import { SummaryModel } from '@/lib/types';
 
-const API_URL = "https://summurize-api-5069ac36b480.herokuapp.com";
+// L'URL de l'API proxy (n'inclut pas le domaine, car Vite s'en charge)
+const API_URL = "/resume"; // Utilisation de /resume pour que le proxy gère le reste
 
 export interface SummaryResponse {
   title?: string;
@@ -20,16 +20,15 @@ export const generateSummary = async (
       ? { url: input, model } 
       : { text: input, model };
       
-    // Use mode: 'no-cors' to avoid preflight OPTIONS requests
-    const response = await fetch(`${API_URL}/resume`, {
+    // Requête vers /resume (géré par Vite proxy)
+    const response = await fetch(API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(payload),
-      // Remove CORS preflight by not sending custom headers
       credentials: 'omit',
-      mode: 'cors' // Try standard CORS first
+      mode: 'cors',
     });
 
     if (!response.ok) {
